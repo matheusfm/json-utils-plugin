@@ -1,0 +1,27 @@
+<idea-plugin version="2">
+    <id>br.com.matheusfm.jsonutils</id>
+    <name>JSON Utils</name>
+    <version>1.0</version>
+    <vendor email="matheusfaria.moraes@gmail.com">Matheus Moraes</vendor>
+
+    <description><![CDATA[
+      JetBrains IDE plugin for test JSONPath expression and format JSON
+    ]]></description>
+
+    <change-notes><![CDATA[
+      JetBrains IDE plugin for test JSONPath expression and format JSON
+    ]]></change-notes>
+
+    <idea-version since-build="145.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="JSON Utils" anchor="right" factoryClass="JSONUtilsToolWindow" icon="/icons/fileTypeJSON.png"/>
+    </extensions>
+
+    <actions>
+
+    </actions>
+
+</idea-plugin>
