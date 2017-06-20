@@ -9,7 +9,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      JetBrains IDE plugin for test JSONPath expression and format JSON
+      bug fix: path with array operator
     ]]></change-notes>
 
     <idea-version since-build="145.0"/>
