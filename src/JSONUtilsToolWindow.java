@@ -92,21 +92,25 @@ public class JSONUtilsToolWindow implements ToolWindowFactory {
     }
 
     /**
-     * @param json  JSON text
+     * @param json JSON text
      * @return pretty JSON
      */
-    private String getPrettyJson(String json) {
-        return json != null && !json.isEmpty() ? gson.toJson(jsonParser.parse(json)) : "";
+    private String getPrettyJson(Object json) {
+        return json != null ?
+                json instanceof String ?
+                        gson.toJson(jsonParser.parse(json.toString())) :
+                        gson.toJson(json, json.getClass())
+                : "";
     }
 
     /**
-     * @param json  JSON text
-     * @param jsonPath  JSON Path expression
+     * @param json     JSON text
+     * @param jsonPath JSON Path expression
      * @return pretty JSON
      */
     private String getPrettyJson(String json, String jsonPath) {
         try {
-            return getPrettyJson(JsonPath.read(json, jsonPath).toString());
+            return getPrettyJson(JsonPath.read(json, jsonPath));
         } catch (Exception e) {
             return "No match";
         }
