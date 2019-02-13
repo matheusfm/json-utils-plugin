@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.github.matheusfm.JSONUtilsToolWindow">
+  <grid id="27dc6" binding="toolWindowContent" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="730" height="457"/>
+    </constraints>
+    <properties>
+      <opaque value="true"/>
+      <preferredSize width="700" height="415"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="f8be3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=" Scheme: "/>
+        </properties>
+      </component>
+      <component id="b6ed5" class="javax.swing.JComboBox" binding="cbSchemes">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+      </component>
+      <grid id="8b3ee" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="true" same-size-vertically="true" hgap="0" vgap="0">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentX value="0.5"/>
+          <background color="-12434878"/>
+          <maximumSize width="100" height="-1"/>
+          <minimumSize width="-1" height="-1"/>
+          <preferredSize width="-1" height="-1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="db56f" class="javax.swing.JButton" binding="btPreviousScheme">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="36" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="20" style="1"/>
+              <icon value="actions/allLeft_dark.png"/>
+              <text value=""/>
+              <toolTipText value="Previous Scheme"/>
+            </properties>
+          </component>
+          <component id="9397e" class="javax.swing.JButton" binding="btNextScheme">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="36" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="20" style="1"/>
+              <icon value="actions/allRight_dark.png"/>
+              <label value=""/>
+              <text value=""/>
+              <toolTipText value="Next Scheme"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="154a3" class="org.fife.ui.rtextarea.RTextScrollPane" binding="scrollPaneSource">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="d2d0c" class="org.fife.ui.rsyntaxtextarea.RSyntaxTextArea" binding="textAreaSource">
+            <constraints/>
+            <properties>
+              <codeFoldingEnabled value="true"/>
+              <inheritsPopupMenu value="true"/>
+              <lineWrap value="true"/>
+              <opaque value="true"/>
+              <tabSize value="0"/>
+              <text value=""/>
+              <toolTipText value=""/>
+              <wrapStyleWord value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="fdcd1" class="javax.swing.JButton" binding="btClear">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <horizontalTextPosition value="0"/>
+          <icon value="actions/clear.png"/>
+          <inheritsPopupMenu value="true"/>
+          <maximumSize width="-1" height="-1"/>
+          <text value=""/>
+          <toolTipText value="Clear text area"/>
+        </properties>
+      </component>
+      <component id="e8e41" class="javax.swing.JButton" binding="btFormat">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="vcs/changelist_dark.png"/>
+          <text value="Format"/>
+          <toolTipText value="Format Json text area"/>
+        </properties>
+      </component>
+      <grid id="1ab10" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="5a8fc" class="javax.swing.JButton" binding="btPaste">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="actions/menu-paste_dark.png"/>
+              <inheritsPopupMenu value="true"/>
+              <text value=""/>
+              <toolTipText value="Paste from clipboard"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="39adc" class="javax.swing.JTextField" binding="txtPath">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="22084" class="javax.swing.JButton" binding="btCopy">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <icon value="actions/copy_dark.png"/>
+          <text value=""/>
+          <toolTipText value="Copy to clipboard"/>
+        </properties>
+      </component>
+      <component id="a2244" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="icons/fileTypeJSON.png"/>
+          <maximumSize width="-1" height="-1"/>
+          <minimumSize width="68" height="18"/>
+          <preferredSize width="-1" height="-1"/>
+          <text value="Path: "/>
+        </properties>
+      </component>
+      <component id="c1744" class="javax.swing.JLabel" binding="lbResult">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=" Evaluation result:"/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <scrollpane id="9f7a" class="org.fife.ui.rtextarea.RTextScrollPane" binding="scrollPaneDest">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="adc03" class="org.fife.ui.rsyntaxtextarea.RSyntaxTextArea" binding="textAreaDest">
+            <constraints/>
+            <properties>
+              <codeFoldingEnabled value="true"/>
+              <editable value="false"/>
+              <inheritsPopupMenu value="true"/>
+              <lineWrap value="true"/>
+              <opaque value="true"/>
+              <tabSize value="0"/>
+              <text value=""/>
+              <toolTipText value=""/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

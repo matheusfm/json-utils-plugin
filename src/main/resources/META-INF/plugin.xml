@@ -1,4 +1,4 @@
-<idea-plugin version="2">
+<idea-plugin>
     <id>br.com.matheusfm.jsonutils</id>
     <name>JSON Utils</name>
     <version>1.1</version>
@@ -10,14 +10,15 @@
 
     <change-notes><![CDATA[
       bug fix: path with array operator
+      add syntax highlighting to json editors 
     ]]></change-notes>
 
-    <idea-version since-build="145.0"/>
+    <idea-version since-build="183.5429"/>
 
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="JSON Utils" anchor="right" factoryClass="JSONUtilsToolWindow" icon="/icons/fileTypeJSON.png"/>
+        <toolWindow id="JSON Utils" anchor="right" factoryClass="com.github.matheusfm.JSONUtilsToolWindow" icon="/icons/fileTypeJSON.png"/>
     </extensions>
 
     <actions>

@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id "org.jetbrains.intellij" version "0.4.2"
+}
+
+group 'com.github.matheusfm'
+version '1.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+    implementation( group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0') {
+        exclude group: 'org.slf4j' , module: 'slf4j-api'
+    }
+    implementation group: 'com.fifesoft', name: 'rsyntaxtextarea', version: '3.0.2'
+}
+
+intellij {
+    version '2018.3.4'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
