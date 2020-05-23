@@ -1,4 +1,4 @@
-.idea/**/workspace.xml
-.idea/**/uiDesigner.xml
-/out/
-*.zip
+.gradle/
+.idea/
+*.iml
+build
