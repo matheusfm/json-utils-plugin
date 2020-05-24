@@ -32,14 +32,12 @@ public class JSONUtilsToolWindow implements ToolWindowFactory {
     private JButton btCopy;
     private JButton btPaste;
     private Gson gson;
-    private JsonParser jsonParser;
 
     private String mJson;
     private String mJsonPath;
 
     public JSONUtilsToolWindow() {
         gson = new GsonBuilder().setPrettyPrinting().create();
-        jsonParser = new JsonParser();
 
         updateJsonTexts();
 
@@ -100,7 +98,7 @@ public class JSONUtilsToolWindow implements ToolWindowFactory {
     private String getPrettyJson(Object json) {
         return json != null ?
                 json instanceof String ?
-                        gson.toJson(jsonParser.parse(json.toString())) :
+                        gson.toJson(JsonParser.parseString(json.toString())) :
                         gson.toJson(json, json.getClass())
                 : "";
     }
