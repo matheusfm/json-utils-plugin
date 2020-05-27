@@ -1,0 +1,14 @@
+<idea-plugin>
+    <id>br.com.matheusfm.jsonutils</id>
+    <name>JSON Utils</name>
+    <version>1.1</version>
+    <vendor email="matheusfaria.moraes@gmail.com">Matheus Moraes</vendor>
+
+    <idea-version since-build="145.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="JSON Utils" anchor="right" factoryClass="br.com.matheusfm.JSONUtilsToolWindow" icon="/icons/fileTypeJSON.png"/>
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.21'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'com.google.code.gson', name: 'gson', version: gsonVersion
+    implementation group: 'com.jayway.jsonpath', name: 'json-path', version: jsonPathVersion
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+}
+
+configurations {
+    compile.exclude group: 'org.slf4j'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+intellij {
+    version intellijVersion
+    updateSinceUntilBuild = false
+}
+
+patchPluginXml {
+    changeNotes(file("src/main/resources/META-INF/change-notes.html").getText())
+    pluginDescription(file("src/main/resources/META-INF/description.html").getText())
+}
