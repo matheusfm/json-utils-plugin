@@ -33,3 +33,7 @@ patchPluginXml {
     changeNotes(file("src/main/resources/META-INF/change-notes.html").getText())
     pluginDescription(file("src/main/resources/META-INF/description.html").getText())
 }
+
+publishPlugin {
+    token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
+}
