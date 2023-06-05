@@ -1,3 +1,5 @@
+DEPRECATED: Now JetBrains IDEs have native support for evaluating JSONPath expressions.
+
 # json-utils-plugin
 JetBrains IDE plugin for test JSONPath expression and format JSON.
 
